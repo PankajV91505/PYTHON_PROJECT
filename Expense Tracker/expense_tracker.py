@@ -31,7 +31,7 @@ def add_expense(category, amount, description=""):
         cursor.execute("INSERT INTO expenses (category, amount, description) VALUES (?, ?, ?)",
                        (category, amount, description))
         conn.commit()
-        console.print(f"[green]✅ Expense added: {category} - ₹{amount}[/green]")
+        console.print(f"[green] Expense added: {category} - ₹{amount}[/green]")
 
 def view_expenses():
     """Displays all recorded expenses in a table."""
@@ -44,7 +44,7 @@ def view_expenses():
         console.print("[yellow]No expenses recorded yet.[/yellow]")
         return
 
-    table = Table(title="💰 Expense Tracker", show_lines=True)
+    table = Table(title=" Expense Tracker", show_lines=True)
     table.add_column("ID", justify="center")
     table.add_column("Category", style="cyan")
     table.add_column("Amount (₹)", justify="right", style="bold green")
@@ -62,10 +62,10 @@ def delete_expense(expense_id):
         cursor = conn.cursor()
         cursor.execute("DELETE FROM expenses WHERE id = ?", (expense_id,))
         if cursor.rowcount:
-            console.print(f"[red]🗑️ Deleted expense ID {expense_id}[/red]")
+            console.print(f"[red] Deleted expense ID {expense_id}[/red]")
             conn.commit()
         else:
-            console.print("[yellow]⚠️ No such expense found.[/yellow]")
+            console.print("[yellow] No such expense found.[/yellow]")
 
 def analyze_expenses():
     """Displays total expenses by category."""
@@ -78,7 +78,7 @@ def analyze_expenses():
         console.print("[yellow]No expenses to analyze.[/yellow]")
         return
 
-    table = Table(title="📊 Expense Analysis")
+    table = Table(title=" Expense Analysis")
     table.add_column("Category", style="cyan")
     table.add_column("Total Spent (₹)", justify="right", style="bold green")
 
