@@ -7,6 +7,7 @@ from rich.table import Table
 console = Console()
 
 # Database setup
+
 DB_NAME = "expenses.db"
 
 def setup_db():
