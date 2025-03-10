@@ -12,11 +12,11 @@ FILE_CATEGORIES = {
     "Others": []  # Files that don’t match any category
 }
 
-# # Step 2: Get the directory path from the user
-# def organize_files(directory):
-#     if not os.path.exists(directory):  
-#         print("Invalid directory! Please enter a valid path.")
-#         return
+# Step 2: Get the directory path from the user
+def organize_files(directory):
+    if not os.path.exists(directory):  
+        print("Invalid directory! Please enter a valid path.")
+        return
 
 #     # Step 3: Loop through all files in the directory
 #     for filename in os.listdir(directory):
