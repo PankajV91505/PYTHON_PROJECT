@@ -18,13 +18,13 @@ def organize_files(directory):
         print("Invalid directory! Please enter a valid path.")
         return
 
-#     # Step 3: Loop through all files in the directory
-#     for filename in os.listdir(directory):
-#         file_path = os.path.join(directory, filename)
+    # Step 3: Loop through all files in the directory
+    for filename in os.listdir(directory):
+        file_path = os.path.join(directory, filename)
 
-#         # Skip directories (we only want to move files)
-#         if os.path.isdir(file_path):
-#             continue  
+        # Skip directories (we only want to move files)
+        if os.path.isdir(file_path):
+            continue  
 
 #         # Step 4: Identify file extension
 #         file_extension = os.path.splitext(filename)[1].lower()  
