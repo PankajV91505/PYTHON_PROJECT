@@ -26,16 +26,16 @@ def organize_files(directory):
         if os.path.isdir(file_path):
             continue  
 
-#         # Step 4: Identify file extension
-#         file_extension = os.path.splitext(filename)[1].lower()  
+        # Step 4: Identify file extension
+        file_extension = os.path.splitext(filename)[1].lower()  
 
-#         # Step 5: Determine file category
-#         category_found = False
-#         for category, extensions in FILE_CATEGORIES.items():
-#             if file_extension in extensions:
-#                 move_file(directory, filename, category)
-#                 category_found = True
-#                 break
+        # Step 5: Determine file category
+        category_found = False
+        for category, extensions in FILE_CATEGORIES.items():
+            if file_extension in extensions:
+                move_file(directory, filename, category)
+                category_found = True
+                break
 
 #         # Step 6: Move uncategorized files to "Others"
 #         if not category_found:
