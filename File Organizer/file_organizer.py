@@ -37,9 +37,9 @@ def organize_files(directory):
                 category_found = True
                 break
 
-#         # Step 6: Move uncategorized files to "Others"
-#         if not category_found:
-#             move_file(directory, filename, "Others")
+        # Step 6: Move uncategorized files to "Others"
+        if not category_found:
+            move_file(directory, filename, "Others")
 
 # # Step 7: Function to move files to categorized folders
 # def move_file(directory, filename, category):
