@@ -41,17 +41,17 @@ def organize_files(directory):
         if not category_found:
             move_file(directory, filename, "Others")
 
-# # Step 7: Function to move files to categorized folders
-# def move_file(directory, filename, category):
-#     category_path = os.path.join(directory, category)
+# Step 7: Function to move files to categorized folders
+def move_file(directory, filename, category):
+    category_path = os.path.join(directory, category)
 
-#     # Create category folder if it doesn’t exist
-#     if not os.path.exists(category_path):
-#         os.makedirs(category_path)
+    # Create category folder if it doesn’t exist
+    if not os.path.exists(category_path):
+        os.makedirs(category_path)
 
-#     # Move the file to the appropriate folder
-#     shutil.move(os.path.join(directory, filename), os.path.join(category_path, filename))
-#     print(f"Moved: {filename} --> {category}/")
+    # Move the file to the appropriate folder
+    shutil.move(os.path.join(directory, filename), os.path.join(category_path, filename))
+    print(f"Moved: {filename} --> {category}/")
 
 # # Step 8: Run the script
 # if __name__ == "__main__":
