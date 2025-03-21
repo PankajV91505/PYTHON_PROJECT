@@ -53,8 +53,8 @@ def move_file(directory, filename, category):
     shutil.move(os.path.join(directory, filename), os.path.join(category_path, filename))
     print(f"Moved: {filename} --> {category}/")
 
-# # Step 8: Run the script
-# if __name__ == "__main__":
-#     folder_path = input("Enter the folder path to organize: ")
-#     organize_files(folder_path)
-#     print("✅ File organization complete!")
+# Step 8: Run the script
+if __name__ == "__main__":
+    folder_path = input("Enter the folder path to organize: ")
+    organize_files(folder_path)
+    print("✅ File organization complete!")
